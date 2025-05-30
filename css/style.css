@@ -1,4 +1,5 @@
 :root {
+  --bg-black: #1c1c1c;
   --color-blue: #2196f3;
   --color-gray: #bdbdbd;
   --color-white: white;
@@ -21,7 +22,7 @@ h1 {
 }
 
 html {
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
   font-size: 62.5%;
 }
 
@@ -99,7 +100,7 @@ a {
 
   & p {
     font-size: 2rem;
-    max-width: 40%;
+    max-width: 30%;
     height: 60%;
     text-align: center;
     text-wrap: wrap;
@@ -114,72 +115,72 @@ a {
   }
 }
 
-.aj-img1 {
-  width: 100%;
-  border-radius: 8px;
-  border-style: solid;
-  border-color: #666666;
-}
-
 .tela1 {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
   min-height: 50px;
-  margin-top: 1px;
-  margin-left: 50px;
-}
 
-.card {
-  width: 32%;
-  height: 85%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 30px;
-  border-radius: 7px;
-  border-style: solid;
-  background-color: var(--color-gray);
-
-  & h2 {
-    color: var(--color-white);
+  & .foto {
+    width: 90%;
+    height: 90%;
+    margin-top: 30px;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: #666666;
   }
 
-  & p {
-    width: 350px;
-    color: var(--color-white);
-    max-width: 95%;
+  & .card {
+    width: 25%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 7px;
+    border-style: solid;
+
+    & h2 {
+      margin-top: 40px;
+      font-size: 4rem;
+      color: var(--color-white);
+    }
+
+    & p {
+      margin-top: 10px;
+      font-size: 2rem;
+      width: 80%;
+      color: var(--color-white);
+      max-width: 95%;
+    }
   }
 }
 
-.img2 {
+.imagem {
   max-width: 60%;
-  width: 100%;
-  padding: 3rem;
-}
-
-.card2 {
-  width: 35%;
-  height: 85%;
   display: flex;
-  align-items: center;
   flex-direction: column;
-  margin-top: 30px;
-  border-radius: 7px;
-  border-style: solid;
-  background-color: #1c1c1c;
+  padding: 3rem;
+  margin-top: 10px;
 
-  & h2 {
-    color: var(--color-white);
+
+  & .foto {
+    width: 65%;
+    height: 100%;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: #666666;
   }
 
   & p {
-    width: 350px;
-    color: var(--color-white);
-    max-width: 95%;
+    margin-top: 20px;
+    width: 75%;
+    color: #fff;
   }
 }
 
-h4 {
-  align-items: center;
+.footer {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
