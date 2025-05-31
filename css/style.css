@@ -3,11 +3,7 @@
   --color-blue: #2196f3;
   --color-gray: #bdbdbd;
   --color-white: white;
-  --bg-gradient: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0.3)
-  );
+  --bg-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
   --color-darknes-gray: #666666;
 }
 
@@ -16,23 +12,22 @@
   box-sizing: border-box;
 }
 
-h1 {
-  font-family: teko;
-  text-transform: uppercase;
-}
-
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
 }
 
 body {
-  font-family: teko;
+  font-family: 'Teko', sans-serif;
   font-size: 1.6rem;
 }
 
-ul,
-ol {
+h1, h2, h3{
+  font-family: 'Teko', sans-serif;
+  text-transform:uppercase;
+}
+
+ul, ol {
   list-style: none;
 }
 
@@ -47,140 +42,120 @@ a {
   width: 100%;
   height: 100vh;
   background-repeat: no-repeat;
-  background-size: couver;
-  background-position: 50%;
+  background-size: cover;
+  background-position: center;
 }
 
 .container {
   width: 100%;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: couver;
-  background-position: 50%;
+  min-height: 100vh;
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .bg-black {
-  background-color: #1c1c1c;
+  background-color: var(--bg-black);
 }
 
 .bg-gray {
   background-color: var(--color-gray);
 }
 
-.bg-img1 {
-  background-image: var(--bg-gradient),
-    url(../img/pexels-dibakar-roy-2432543-26146692.jpg);
+.bg-image {
+  background-image: var(--bg-gradient), url(../img/pexels-dibakar-roy-2432543-26146692.jpg);
 }
 
 .header-page {
   width: 100%;
-  height: 1rem;
   display: flex;
   color: var(--color-white);
   align-items: center;
   justify-content: space-between;
   padding: 3rem;
-  font-size: 25px;
+  font-size: 2.5rem;
 }
 
 .header-menu ul {
   display: flex;
-  gap: 30px;
+  gap: 3rem;
 }
 
 .hero {
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 10rem);
   display: flex;
   flex-direction: column;
   color: var(--color-white);
   align-items: center;
   justify-content: center;
+}
 
-  & p {
-    font-size: 2rem;
-    max-width: 30%;
-    height: 60%;
-    text-align: center;
-    text-wrap: wrap;
-  }
-  & .btn {
-    font-size: 1.5rem;
-    width: 150px;
-    height: 40px;
-    margin-top: 2rem;
-    border-radius: 20px;
-    background-color: gray;
-  }
+.hero p {
+  font-size: 2rem;
+  max-width: 30%;
+  text-align: center;
+}
+
+.btn {
+  font-size: 1.5rem;
+  width: 150px;
+  height: 40px;
+  margin-top: 2rem;
+  border-radius: 20px;
+  background-color: gray;
+  color: var(--color-white);
+  border: none;
+  cursor: pointer;
 }
 
 .tela1 {
+  width: 90%;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-  min-height: 50px;
-
-  & .foto {
-    width: 90%;
-    height: 90%;
-    margin-top: 30px;
-    border-radius: 8px;
-    border-style: solid;
-    border-color: #666666;
-  }
-
-  & .card {
-    width: 25%;
-    height: 60%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 7px;
-    border-style: solid;
-
-    & h2 {
-      margin-top: 40px;
-      font-size: 4rem;
-      color: var(--color-white);
-    }
-
-    & p {
-      margin-top: 10px;
-      font-size: 2rem;
-      width: 80%;
-      color: var(--color-white);
-      max-width: 95%;
-    }
-  }
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
 }
 
-.imagem {
-  max-width: 60%;
+.coluna-esquerda, .coluna-direita {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 3rem;
-  margin-top: 10px;
-
-
-  & .foto {
-    width: 65%;
-    height: 100%;
-    border-radius: 8px;
-    border-style: solid;
-    border-color: #666666;
-  }
-
-  & p {
-    margin-top: 20px;
-    width: 75%;
-    color: #fff;
-  }
+  align-items: center;
 }
 
-.footer {
+.card {
+  width: 80%;
+  /* height: 70%; */
+  padding: 2rem;
+  border-radius: 7px;
+  border: 1px solid var(--color-darknes-gray);
+}
+
+.card h2, h3 {
+  display: flex;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: var(--color-white);
+  margin-bottom: 1rem;
+}
+
+.card p {
+  font-size: 2rem;
+  color: var(--color-white);
+}
+
+.foto {
+  width: 80%;
+  border-radius: 8px;
+  border: 1px solid var(--color-darknes-gray);
+  margin-bottom: 1rem;
+}
+
+footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2rem;
+  background: var(--bg-black);
+  color: var(--color-white);
 }
