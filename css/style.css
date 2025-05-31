@@ -15,6 +15,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
+  font-family: 'Teko', sans-serif;
 }
 
 body {
@@ -22,21 +23,29 @@ body {
   font-size: 1.6rem;
 }
 
-h1, h2, h3{
-  font-family: 'Teko', sans-serif;
-  text-transform:uppercase;
+h1,
+h2,
+h3 {
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
 a {
   text-decoration: none;
   color: var(--color-white);
-  font-weight: 600;
+  font-weight: 400;
   transition: color 0.7s;
 }
+
+a:hover {
+  color: gray;
+}
+
 
 .secao1 {
   width: 100%;
@@ -88,24 +97,31 @@ a {
   color: var(--color-white);
   align-items: center;
   justify-content: center;
+
+  & p {
+    font-size: 2rem;
+    max-width: 30%;
+    text-align: center;
+  }
 }
 
-.hero p {
-  font-size: 2rem;
-  max-width: 30%;
-  text-align: center;
-}
 
 .btn {
   font-size: 1.5rem;
+  margin-top: 2rem;
   width: 150px;
   height: 40px;
-  margin-top: 2rem;
   border-radius: 20px;
+  border-color: #1c1c1c;
+  border: none;
   background-color: gray;
   color: var(--color-white);
-  border: none;
   cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: transparent;
 }
 
 .tela1 {
@@ -116,11 +132,13 @@ a {
   gap: 2rem;
 }
 
-.coluna-esquerda, .coluna-direita {
+.coluna-esquerda,
+.coluna-direita {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 .card {
@@ -131,7 +149,7 @@ a {
   border: 1px solid var(--color-darknes-gray);
 }
 
-.card h2, h3 {
+.card h3 {
   display: flex;
   justify-content: center;
   font-size: 2.5rem;
@@ -141,6 +159,7 @@ a {
 
 .card p {
   font-size: 2rem;
+  font-weight: 200;
   color: var(--color-white);
 }
 
@@ -148,7 +167,25 @@ a {
   width: 80%;
   border-radius: 8px;
   border: 1px solid var(--color-darknes-gray);
-  margin-bottom: 1rem;
+  margin-bottom: rem;
+}
+
+.voltaraotopo {
+  transition: all .25s ease-in-out;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: inline-flex;
+
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3em 3em 0;
+  border-radius: 50%;
+  padding: .25em;
+  width: 2.5%;
+  height: 5%;
+  background-color: black;
 }
 
 footer {
@@ -158,4 +195,14 @@ footer {
   padding: 2rem;
   background: var(--bg-black);
   color: var(--color-white);
+
+  & h4 {
+    font-size: 2rem;
+    color: white;
+    font-weight: 200;
+  }
+
+  & span {
+    color: var(--color-gray);
+  }
 }
