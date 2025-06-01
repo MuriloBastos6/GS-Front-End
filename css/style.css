@@ -36,6 +36,7 @@ ol {
 }
 
 a {
+  font-size: 2rem;
   text-decoration: none;
   color: var(--color-white);
   font-weight: 400;
@@ -66,11 +67,9 @@ a:hover {
 .bg-black {
   background-color: var(--bg-black);
 }
-
 .bg-gray {
   background-color: var(--color-gray);
 }
-
 .bg-image {
   background-image: var(--bg-gradient), url(../img/landing2.png);
 }
@@ -87,7 +86,7 @@ a:hover {
 
 .header-menu ul {
   display: flex;
-  gap: 3rem;
+  gap: 1rem;
 }
 
 .hero {
