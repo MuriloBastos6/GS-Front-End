@@ -72,7 +72,7 @@ a:hover {
 }
 
 .bg-image {
-  background-image: var(--bg-gradient), url(../img/pexels-dibakar-roy-2432543-26146692.jpg);
+  background-image: var(--bg-gradient), url(../img/landing2.png);
 }
 
 .header-page {
