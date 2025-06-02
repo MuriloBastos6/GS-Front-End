@@ -1,10 +1,11 @@
 :root {
   --bg-black: #1c1c1c;
   --color-blue: #2196f3;
-  --color-gray: #bdbdbd;
+  --color-gray: #3f3f3f;
   --color-white: white;
   --bg-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
   --color-darknes-gray: #666666;
+  --color-red:rgb(255, 0, 0);
 }
 
 * {
@@ -19,19 +20,19 @@ html {
 }
 
 body {
-  font-family: 'Teko', sans-serif;
   font-size: 1.6rem;
 }
 
-h1,
-h2,
-h3 {
+h1 span{
+  color: var(--color-red);
+}
+
+h1, h2 {
   font-weight: 400;
   text-transform: uppercase;
 }
 
-ul,
-ol {
+ul {
   list-style: none;
 }
 
@@ -39,14 +40,12 @@ a {
   font-size: 2rem;
   text-decoration: none;
   color: var(--color-white);
-  font-weight: 400;
   transition: color 0.7s;
 }
 
 a:hover {
-  color: gray;
+  color: var(--color-red);
 }
-
 
 .secao1 {
   width: 100%;
@@ -62,6 +61,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-self: center;
 }
 
 .bg-black {
@@ -77,10 +77,9 @@ a:hover {
 .header-page {
   width: 100%;
   display: flex;
-  color: var(--color-white);
-  align-items: center;
   justify-content: space-between;
   padding: 3rem;
+  color: var(--color-white);
   font-size: 2.5rem;
 }
 
@@ -96,92 +95,94 @@ a:hover {
   color: var(--color-white);
   align-items: center;
   justify-content: center;
-
-  & p {
-    font-size: 2rem;
-    max-width: 30%;
-    text-align: center;
-  }
 }
 
+.hero p {
+  font-size: 2rem;
+  max-width: 30%;
+  text-align: center;
+}
 
 .btn {
-  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  font-size: 2.7rem;
   margin-top: 2rem;
   width: 150px;
   height: 40px;
   border-radius: 20px;
-  border-color: #1c1c1c;
   border: none;
-  background-color: gray;
+  background-color: var(--color-red);
   color: var(--color-white);
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
+
 .btn:hover {
   background-color: transparent;
 }
 
-.tela1 {
-  width: 90%;
+.tela-linha {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 90%;
   gap: 2rem;
 }
 
-.coluna-esquerda,
-.coluna-direita {
+.texto-lado {
+  flex: 1;
+  color: var(--color-white);
+  font-size: 2rem;
+}
+
+.texto-lado h3 {
+  font-weight: 500;
+  font-size: 2.8rem;
+  color: var(--color-red);
+  margin-bottom: 1rem;
+}
+
+.texto-lado p {
+  width: 70%;
+  font-size: 2.3rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.imagem-lado {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.card {
-  width: 80%;
-  /* height: 70%; */
-  padding: 2rem;
-  border-radius: 7px;
-  border: 1px solid var(--color-darknes-gray);
-}
-
-.card h3 {
-  display: flex;
   justify-content: center;
-  font-size: 2.5rem;
-  color: var(--color-white);
-  margin-bottom: 1rem;
-}
-
-.card p {
-  font-size: 2rem;
-  font-weight: 200;
-  color: var(--color-white);
 }
 
 .foto {
-  width: 80%;
+  width: 70%;
+  max-width: 500px;
+  margin-bottom: 10px;
+  padding: 10px;
   border-radius: 8px;
   border: 1px solid var(--color-darknes-gray);
-  margin-bottom: rem;
 }
 
 .voltaraotopo {
-  transition: all .25s ease-in-out;
+  transition: all 0.25s ease-in-out;
   position: fixed;
   bottom: 0;
   right: 0;
   display: inline-flex;
-
   cursor: pointer;
   align-items: center;
   justify-content: center;
   margin: 0 3em 3em 0;
   border-radius: 50%;
-  padding: .25rem;
+  padding: 0.25rem;
   width: 3rem;
   height: 4rem;
   background-color: black;
@@ -194,14 +195,13 @@ footer {
   padding: 2rem;
   background: var(--bg-black);
   color: var(--color-white);
+}
 
-  & h4 {
-    font-size: 2rem;
-    color: white;
-    font-weight: 200;
-  }
+footer h4 {
+  font-size: 2rem;
+  font-weight: 200;
+}
 
-  & span {
-    color: var(--color-gray);
-  }
+footer span {
+  color:var(--color-red);
 }
