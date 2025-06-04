@@ -2,10 +2,10 @@
   --bg-black: #1c1c1c;
   --color-blue: #2196f3;
   --color-gray: #3f3f3f;
-  --color-white: white;
+  --color-white: #ffffff;
   --bg-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
   --color-darknes-gray: #666666;
-  --color-red:rgb(255, 0, 0);
+  --color-red: rgb(255, 0, 0);
 }
 
 * {
@@ -16,20 +16,21 @@
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
+  font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3 {
   font-family: 'Teko', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 body {
   font-size: 1.6rem;
-}
-
-h1 span{
-  color: var(--color-red);
-}
-
-h1, h2 {
-  font-weight: 400;
-  text-transform: uppercase;
+  background-color: #111;
+  color: var(--color-white);
 }
 
 ul {
@@ -45,6 +46,13 @@ a {
 
 a:hover {
   color: var(--color-red);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.a:hover> :not(:hover) {
+  opacity: .4;
+  transform: scale(0.9);
 }
 
 .secao1 {
@@ -55,21 +63,23 @@ a:hover {
   background-position: center;
 }
 
-.container {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-self: center;
+.nomeproduto {
+  color: var(--color-red);
+  font-size: 10rem;
+  text-transform: lowercase;
+  transition: transform 0.3s;
+  font-weight: 500;
 }
 
-.bg-black {
-  background-color: var(--bg-black);
+.nomeproduto:hover {
+  text-transform: uppercase;
+  font-weight: 600;
 }
-.bg-gray {
-  background-color: var(--color-gray);
+
+.company {
+  color: var(--color-red);
 }
+
 .bg-image {
   background-image: var(--bg-gradient), url(../img/landing2.png);
 }
@@ -85,107 +95,186 @@ a:hover {
 
 .header-menu ul {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .hero {
   min-height: calc(100vh - 10rem);
   display: flex;
   flex-direction: column;
-  color: var(--color-white);
   align-items: center;
   justify-content: center;
+  color: var(--color-white);
+  text-align: center;
+  gap: 2rem;
 }
 
 .hero p {
   font-size: 2rem;
-  max-width: 30%;
-  text-align: center;
+  max-width: 40rem;
+  line-height: 1.6;
 }
 
 .btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-
-  font-size: 2.7rem;
+  font-size: 2rem;
   margin-top: 2rem;
-  width: 150px;
-  height: 40px;
-  border-radius: 20px;
+  width: 160px;
+  height: 45px;
+  border-radius: 25px;
   border: none;
   background-color: var(--color-red);
   color: var(--color-white);
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease-in-out;
 }
-
 
 .btn:hover {
   background-color: transparent;
+  border: 1px solid var(--color-red);
+}
+
+.container {
+  width: 100%;
+  padding: 8rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bg-black {
+  background-color: var(--bg-black);
+}
+
+.bg-gray {
+  background-color: var(--color-gray);
 }
 
 .tela-linha {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   flex-wrap: wrap;
-  width: 90%;
-  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.texto-lado,
+.imagem-lado {
+  flex: 1 1 320px;
+  padding: 2rem;
+  text-align: center;
 }
 
 .texto-lado {
-  flex: 1;
+  flex: 1 1 30%;
+  padding: 2rem;
   color: var(--color-white);
-  font-size: 2rem;
-}
-
-.texto-lado h3 {
-  font-weight: 500;
-  font-size: 2.8rem;
-  color: var(--color-red);
-  margin-bottom: 1rem;
-}
-
-.texto-lado p {
-  width: 70%;
-  font-size: 2.3rem;
-  margin-bottom: 2rem;
-  line-height: 1.5;
-}
-
-.imagem-lado {
-  flex: 1;
+  text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 2.5rem;
+}
+
+.spanflow {
+  transition: 0.3s var(--color-white);
+}
+
+.spanflow:hover {
+  text-shadow: var(--color-blue);
+}
+
+.texto-lado h3 {
+  font-size: clamp(3.2rem, 5vw, 4.4rem);
+  color: var(--color-white);
+  font-family: 'Teko', sans-serif;
+  letter-spacing: 1px;
+  position: relative;
+  padding-left: 1.5rem;
+  line-height: 1.2;
+  text-transform: lowercase;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.texto-lado h3:hover {
+  transform: scale(1.03);
+  text-shadow: 0 0 25px var(--color-red);
+  text-transform: uppercase;
+}
+
+.texto-lado h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 85%;
+  background-color: var(--color-red);
+  border-radius: 2px;
+}
+
+.texto-lado p {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-family: 'Inter', sans-serif;
+  color: #dcdcdc;
+  line-height: 1.6;
+  max-width: 90%;
+  text-shadow: var(--color-red);
+  text-wrap: wrap;
+  text-align: justify;
+}
+
+.imagem-lado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .foto {
-  width: 70%;
-  max-width: 500px;
-  margin-bottom: 10px;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid var(--color-darknes-gray);
+  width: 100%;
+  max-width: 450px;
+  border-radius: 16px;
+  border: 1px solid var(--color-red);
+  padding: 8px;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 2rem;
+  animation: gradient-shift 5s ease-in-out infinite;
+  background-size: 200% 200%;
+  transform: .35s;
+  cursor: pointer;
+}
+
+.foto:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 40px var(--color-red);
+}
+
+.imagem-lado:hover> :not(:hover) {
+  opacity: .4;
+  transform: scale(0.9);
 }
 
 .voltaraotopo {
-  transition: all 0.25s ease-in-out;
   position: fixed;
-  bottom: 0;
-  right: 0;
+  bottom: 3rem;
+  right: 3rem;
   display: inline-flex;
-  cursor: pointer;
   align-items: center;
   justify-content: center;
-  margin: 0 3em 3em 0;
-  border-radius: 50%;
-  padding: 0.25rem;
-  width: 3rem;
-  height: 4rem;
+  width: 4.2rem;
+  height: 4.2rem;
   background-color: black;
+  border-radius: 50%;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
 }
 
 footer {
@@ -195,13 +284,11 @@ footer {
   padding: 2rem;
   background: var(--bg-black);
   color: var(--color-white);
-}
-
-footer h4 {
   font-size: 2rem;
-  font-weight: 200;
+  font-weight: 300;
+  text-align: center;
 }
 
 footer span {
-  color:var(--color-red);
+  color: var(--color-red);
 }
